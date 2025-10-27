@@ -1,23 +1,46 @@
-// #include <stdio.h>
-// int main(){
-// char operator;
-// int num1,num2;
-// int choice;
-// printf("enter one num");
-// scanf("%d"num1);
-// printf("enter a second num");
-// scanf("%d",num2);
-// printf("choice an operation(+,/,-,*)", &operator);
-// switch (num=!1)
-// {
-// case constant expression:
-//     /* code */
-//     break;
-
-// default:
-//     break;
-// }
+#include <stdio.h>
+int main(){
+char operator;
+double num1;
+double num2;
+double result;
 
 
-// return 0;
-// }
+printf("select the operation (+ - * /): ");
+scanf("%c",&operator);
+
+printf("enter one num 1: ");
+scanf("%lf",&num1);
+
+printf("enter a second num 2: ");
+scanf("%lf",&num2);
+
+
+    switch (operator)
+{
+    case '+':
+   result = num1 + num2;
+   printf("result is: %.2lf\n",result); 
+    break;
+
+     case '-':
+   result = num1 - num2;
+   printf("result is: %.2lf\n",result); 
+    break;
+     case '*':
+   result = num1 * num2;
+   printf("result is: %.2lf\n",result); 
+    break;
+
+     case '/':
+   result = num1 / num2;
+   printf("result is: %.2lf\n",result); 
+    break;
+
+    default:
+    printf("%c is not valid", operator);
+    break;
+}
+
+return 0;
+}
